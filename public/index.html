@@ -7,5 +7,18 @@
 </head>
 <body>
     <p>Welcome to our app</p>
+   <script src="/socket.io/socket.io.js"></script>
+
+   <script type="text/javascript">
+   let socket= io();
+
+   socket.on('connect',()=>{
+       console.log("connected");
+   });
+
+   socket.on('disconnect',()=>{
+       console.log("disconnected");
+   });
+  </script>
 </body>
 </html>
